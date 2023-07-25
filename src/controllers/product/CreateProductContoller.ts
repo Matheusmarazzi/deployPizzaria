@@ -5,11 +5,11 @@ import { CreateProductService } from "../../services/product/CreateProductServic
 class CreateProductController{
     async handle(req:Request, res:Response ){
         const {name,price,description,category_id} =  req.body;
+        let banner = '';
         const createProductService = new CreateProductService();
-        const banner = 'banner';
 
         
-        
+            
 
         const product =  await createProductService.execute({
             name,
@@ -21,9 +21,10 @@ class CreateProductController{
 
         return res.json(product);
     
+        }
 
         
         
     }
-}
+
 export {CreateProductController}

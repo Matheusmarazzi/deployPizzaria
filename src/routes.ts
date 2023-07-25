@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
-import multer from 'multer';
+
+
 import 'express-async-errors';
 
 import uploadConfig from "./config/multer";
@@ -27,7 +28,7 @@ import { FinishOrderController } from "./controllers/order/FinishOrderController
 
 const router = Router();
 
-const upload = multer(uploadConfig.upload("./tmp"));
+
 
 
 // ROTAS USERS------------------------------------------------------
